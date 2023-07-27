@@ -1,0 +1,27 @@
+​Необходимо реализовать паттерн Builder для формирования кусочков кода.
+
+Пример использования API, которое вам необходимо поддержать:
+
+cb = CodeBuilder('Person').add_field('name', '""').add_field('age', '0')
+print(cb)
+
+Ожидаемый вывод примера:
+
+class Person:
+  def __init__(self):
+    self.name = ""
+    self.age = 0
+
+Не забудьте учесть пробелы и отступы.
+
+Пример с пустым классом:
+
+cb = CodeBuilder('Foo')
+print(cb)
+
+Ожидаемый вывод:
+
+class Foo:
+  pass
+
+​

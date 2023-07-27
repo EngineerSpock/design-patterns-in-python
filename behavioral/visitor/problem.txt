@@ -1,0 +1,18 @@
+​Требуется реализовать посетитель ExpressionPrinter  для вывода разных математических выражений. Выражения состоят из сложений и умножений.
+
+Пожалуйста, ставьте круглые скобки вокруг операций сложения, но не операций умножения! Так же уберите пробелы в выводе.
+
+Пример:
+
+- Ввод: AdditionExpression(Value(2), Value(3))
+- Вывод: (2+3)
+
+Пример теста API, который вы должны поддержать:
+
+class Evaluate(unittest.TestCase):
+    def test_simple_addition(self):
+        simple = AdditionExpression(Value(2), Value(3))
+        ep = ExpressionPrinter()
+        ep.visit(simple)
+        self.assertEqual("(2+3)", str(ep))
+​

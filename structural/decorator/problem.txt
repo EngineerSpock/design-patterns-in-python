@@ -1,0 +1,21 @@
+​Вам даны два типа: Circle и Square. Так же дан декоратор ColoredShape.
+
+Декоратор добавляет цвет к строке, описывающий объект определённой фигуры.
+
+Однако, тут есть место для трюка:
+дело в том, что у декоратора есть метод resize(), который должен изменять размер хранимой в нём фигуры,
+но при этом только в классе Circle есть метод resize(), а в Square его нет.
+
+Требуется дополнить предложенный шаблон реализации без добавления метода resize в класс Square!
+
+Вот пример юнит-теста, проверяющего API, который вам надо реализовать.
+
+class Evaluate(TestCase):
+    def test_circle(self):
+        circle = ColoredShape(Circle(5), 'red')
+        self.assertEqual('A circle of radius 5 has the color red',
+                         str(circle))
+        circle.resize(2)
+        self.assertEqual('A circle of radius 10 has the color red',
+                         str(circle))
+​
